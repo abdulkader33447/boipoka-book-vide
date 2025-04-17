@@ -1,12 +1,20 @@
 import React from "react";
+import { Link } from "react-router";
 
 const Navbar = () => {
   const links = (
     <>
       <ul className="sm:flex gap-7">
-        <li className="sm:btn hover:border-solid hover:border-[#23BE0A] hover:text-[#23BE0A]">Home</li>
-        <li className="w-31 sm:btn hover:border-solid hover:border-[#23BE0A] hover:text-[#23BE0A]">Listed Books</li>
+        <Link to={'/'}><li className="sm:btn hover:border-solid hover:border-[#23BE0A] hover:text-[#23BE0A]">Home</li></Link>
+        <Link to='/about'>
+        <li className="sm:btn hover:border-solid hover:border-[#23BE0A] hover:text-[#23BE0A]">About</li>
+        </Link>
+        
+        {/* <li className="w-31 sm:btn hover:border-solid hover:border-[#23BE0A] hover:text-[#23BE0A]">Listed Books</li> */}
+
+        <Link>
         <li className="w-31 sm:btn hover:border-solid hover:border-[#23BE0A] hover:text-[#23BE0A]">Pages to Read</li>
+        </Link>
       </ul>
     </>
   );
@@ -39,7 +47,7 @@ const Navbar = () => {
             {links}
           </ul>
         </div>
-        <a className="btn btn-ghost text-xl hover:border-[#23BE0A]">Book Vibe</a>
+        <a href="/" className="btn btn-ghost text-xl hover:border-[#23BE0A]">Book Vibe</a>
       </div>
       <div className="sm:block hidden ">
         {links}
