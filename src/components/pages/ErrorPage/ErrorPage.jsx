@@ -1,9 +1,10 @@
 import React from 'react';
+import errorimg from '../../../assets/404_page-not-found.png'
 
 const ErrorPage = () => {
   return (
     <div>
-      <img src="https://i.ibb.co.com/8L5vpcQC/404-page-not-found.png" alt="" />
+      <img src={errorimg} alt="" />
     </div>
   );
 };
