@@ -46,7 +46,7 @@ const Navbar = () => {
         </div>
       <div className="navbar-center hidden lg:flex"></div>
       <div className="navbar-end">
-        <a className="btn btn hover:border-solid hover:border-[#23BE0A] hover:text-[#23BE0A]">Button</a>
+        <a className="btn bg-[#23BE0A] text-white">Button</a>
       </div>
     </div>
   );
