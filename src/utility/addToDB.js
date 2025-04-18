@@ -18,7 +18,7 @@ const addToStoredDB = (id) => {
     storedBookData.push(id);
     // console.log(storedBookData);
     const data = JSON.stringify(storedBookData);
-    localStorage.setItem('readList',data)
+    localStorage.setItem("readList", data);
   }
 };
 

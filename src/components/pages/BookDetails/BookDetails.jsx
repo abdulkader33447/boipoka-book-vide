@@ -30,12 +30,12 @@ const BookDetails = () => {
 
   const handleMarkAsRead = (id) => {
     // store with id
-    // where to store 
+    // where to store
     // array or collection
     // if book already exist, the show a alert
     // if book not exist, then push in the collection or array
 
-    addToStoredDB(id)
+    addToStoredDB(id);
   };
 
   return (
@@ -79,7 +79,10 @@ const BookDetails = () => {
           Rating : <span className="font-medium sm:ml-27 ml-10">{rating}</span>
         </p>
 
-        <button onClick={()=>handleMarkAsRead(id)} className="btn hover:btn-outline hover:text-[#23BE0A] hover:border-[#23BE0A] sm:mr-7 mr-4">
+        <button
+          onClick={() => handleMarkAsRead(id)}
+          className="btn hover:btn-outline hover:text-[#23BE0A] hover:border-[#23BE0A] sm:mr-7 mr-4"
+        >
           Mark as Read
         </button>
         <button className="btn hover:btn-outline hover:text-[#23BE0A] hover:border-[#23BE0A]">

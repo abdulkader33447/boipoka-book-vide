@@ -14,7 +14,9 @@ const Navbar = () => {
           </li>
         </NavLink>
         <NavLink
-          className={({ isActive }) => (isActive ? "hover:border-[#23BE0A] hover:text-[#23BE0A]" : "")}
+          className={({ isActive }) =>
+            isActive ? "hover:border-[#23BE0A] hover:text-[#23BE0A]" : ""
+          }
           to="/about"
         >
           <li className="sm:btn hover:border-solid hover:border-[#23BE0A] hover:text-[#23BE0A]">

@@ -2,7 +2,6 @@ import React, { use } from "react";
 import { FaStarHalfAlt } from "react-icons/fa";
 import { Link } from "react-router";
 
-
 const Book = ({ singleBook }) => {
   // const data = use(bookPromise);
   // console.log(data);
