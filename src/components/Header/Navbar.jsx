@@ -1,11 +1,11 @@
 import React from "react";
-import { Link } from "react-router";
+import { Link,NavLink } from "react-router";
 
 const Navbar = () => {
   const links = (
     <>
       <ul className="sm:flex gap-7">
-        <Link to={'/'}><li className="sm:btn hover:border-solid hover:border-[#23BE0A] hover:text-[#23BE0A]">Home</li></Link>
+        <Link to='/'><li className="sm:btn hover:border-solid hover:border-[#23BE0A] hover:text-[#23BE0A]">Home</li></Link>
         <Link to='/about'>
         <li className="sm:btn hover:border-solid hover:border-[#23BE0A] hover:text-[#23BE0A]">About</li>
         </Link>
