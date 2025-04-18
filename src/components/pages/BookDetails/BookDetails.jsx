@@ -40,14 +40,14 @@ const BookDetails = () => {
 
   return (
     <div className="flex sm:flex-row flex-col items-center justify-between m-5 gap-5 min-h-[calc(100vh-323px)]">
-      <div className="w-12/12 bg-gray-100 place-content-center sm:p-10 p-3 rounded-xl">
-        <img className="" src={image} alt="" />
+      <div className="w-12/12 h-[470px] bg-gray-100 place-content-center sm:p-8 p-3 rounded-xl">
+        <img className=" h-[380px]" src={image} alt="" />
       </div>
       <div className="description">
         <h2 className="text-2xl font-bold">{bookName}</h2>
         <p className="mb-2">By : {author}</p>
         <p>{category}</p>
-        <p>
+        <p className="text-ellipsis">
           <span className="text-[15px] font-bold">Review : </span>
           {review}
         </p>
