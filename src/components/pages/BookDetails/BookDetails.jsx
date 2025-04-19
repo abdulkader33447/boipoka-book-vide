@@ -41,10 +41,10 @@ const BookDetails = () => {
     // if book not exist, then push in the collection or array
     MySwal.fire({
       title: "Good job!",
-      text: "You clicked the button!",
+      text: "Added to read list",
       icon: "success",
     });
-    toast("Wow so easy!");
+    toast("Added a book");
     addToStoredDB(id);
   };
 

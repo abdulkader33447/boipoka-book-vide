@@ -52,6 +52,10 @@ const Footer = () => {
             <p>React Router </p>
             <SiReactrouter />
           </span>
+          <span className="flex gap-2 items-center">
+            <p>DaisyUi </p><p>🌼</p>
+            
+          </span>
         </div>
       </div>
       <aside>
