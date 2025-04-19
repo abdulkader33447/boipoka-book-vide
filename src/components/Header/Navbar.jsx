@@ -6,41 +6,37 @@ const Navbar = () => {
     <>
       <ul className="sm:flex gap-7">
         <NavLink
+          className={({ isActive }) =>
+            isActive ? "text-green-500 outline-green-500 btn " : "btn"
+          }
           to="/"
-          className={({ isActive }) => (isActive ? "text-[#23BE0A]" : "")}
         >
-          <li className="sm:btn hover:border-solid hover:border-[#23BE0A] hover:text-[#23BE0A]">
-            Home
-          </li>
+          <li>Home</li>
         </NavLink>
+
         <NavLink
           className={({ isActive }) =>
-            isActive ? "hover:border-[#23BE0A] hover:text-[#23BE0A]" : ""
+            isActive ? "text-green-500 outline-green-500 btn " : "btn "
           }
           to="/about"
         >
-          <li className="sm:btn hover:border-solid hover:border-[#23BE0A] hover:text-[#23BE0A]">
-            About
-          </li>
-        </NavLink>
-
-        <NavLink to='/readList'>
-        <li className="w-31 sm:btn hover:border-solid hover:border-[#23BE0A] hover:text-[#23BE0A]">Read List</li>
+          <li>About</li>
         </NavLink>
 
         <NavLink
-          className={({ isActive }) => (isActive ? "text-[#23BE0A]" : "")}
+          className={({ isActive }) =>
+            isActive ? "text-green-500 outline-green-500 btn " : "btn"
+          }
+          to="/readList"
         >
-          <li className="w-31 sm:btn hover:border-solid hover:border-[#23BE0A] hover:text-[#23BE0A]">
-            Pages to Read
-          </li>
+          <li>Read List</li>
         </NavLink>
       </ul>
     </>
   );
 
   return (
-    <div className="navbar p-0 bg-base-100 shadow-sm">
+    <div className="navbar p-0 bg-base-200 shadow-sm fixed top-0  z-20 sm:w-7xl rounded-lg">
       <div className="navbar-start">
         <div className="dropdown sm:hidden">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -73,8 +69,8 @@ const Navbar = () => {
       </div>
       <div className="sm:block hidden ">{links}</div>
       <div className="navbar-center hidden lg:flex"></div>
-      <div className="navbar-end">
-        <a className="btn bg-[#23BE0A] text-white">Button</a>
+      <div className="navbar-end mr-3">
+        <a className="btn bg-[#23BE0A] text-white">Sign In</a>
       </div>
     </div>
   );

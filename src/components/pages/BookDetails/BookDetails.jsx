@@ -3,7 +3,7 @@ import { useLoaderData, useParams } from "react-router";
 import { addToStoredDB } from "../../../utility/addToDB";
 import Swal from "sweetalert2";
 import withReactContent from "sweetalert2-react-content";
-import { ToastContainer, toast } from 'react-toastify';
+import { ToastContainer, toast } from "react-toastify";
 
 const MySwal = withReactContent(Swal);
 
@@ -42,19 +42,19 @@ const BookDetails = () => {
     MySwal.fire({
       title: "Good job!",
       text: "You clicked the button!",
-      icon: "success"
+      icon: "success",
     });
-    toast("Wow so easy!")
+    toast("Wow so easy!");
     addToStoredDB(id);
   };
 
   return (
-    <div className="flex sm:flex-row flex-col items-center justify-between m-5 gap-5 min-h-[calc(100vh-323px)]">
+    <div className="flex sm:flex-row flex-col items-center justify-between m-5 gap-5 min-h-[calc(100vh-323px)] mt-20">
       <div className="w-12/12 h-[470px] bg-gray-100 place-content-center sm:p-8 p-3 rounded-xl">
         <img className=" h-[380px]" src={image} alt="" />
       </div>
-     
-      <ToastContainer/>
+
+      <ToastContainer />
       <div className="description">
         <h2 className="text-2xl font-bold">{bookName}</h2>
         <p className="mb-2">By : {author}</p>

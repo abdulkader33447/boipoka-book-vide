@@ -37,7 +37,7 @@ const Book = ({ singleBook }) => {
           <h2 className="card-title">
             Book Name :{bookName}
             <div className="badge badge-secondary">{yearOfPublishing}</div>
-          </h2>
+          </h2> 
           <p>Publisher : {publisher}</p>
           <div className="border border-dashed  border-gray-400"></div>
           <div className="card-actions justify-end">

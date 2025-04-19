@@ -41,14 +41,19 @@ const ReadList = () => {
   };
 
   return (
-    <div>
-      <details className="dropdown">
-        <summary className="btn m-1">sort by : {sort ? sort : ""}</summary>
-        <ul className="menu dropdown-content bg-base-100 rounded-box z-1 w-52 p-2 shadow-sm">
-          <li>
+    <div className="mt-26">
+      <div className="bg-gray-100 p-5 rounded-lg mb-5">
+        <h1 className="text-center text-2xl font-medium ">Books</h1>
+      </div>
+      <details className="dropdown grid justify-center ">
+        <summary className="btn m-2 bg-[#23BE0A] text-white rounded-lg">
+          sort by : {sort ? sort : ""}
+        </summary>
+        <ul className="menu dropdown-content bg-base-100 rounded-box z-1 w-26 p-2 shadow-sm ">
+          <li className="bg-[#23BE0A] text-white mb-2 rounded-lg">
             <a onClick={() => handleSort("pages")}>pages</a>
           </li>
-          <li>
+          <li className="bg-[#23BE0A] text-white rounded-lg">
             <a onClick={() => handleSort("rating")}>rating</a>
           </li>
         </ul>
@@ -61,9 +66,11 @@ const ReadList = () => {
 
         <TabPanel>
           <h2>Book i read {readList.length}</h2>
-          {readList.map((b) => (
-            <Book key={b.bookId} singleBook={b}></Book>
-          ))}
+          <div className="grid sm:grid-cols-3">
+            {readList.map((b) => (
+              <Book key={b.bookId} singleBook={b}></Book>
+            ))}
+          </div>
         </TabPanel>
         <TabPanel>
           <h2>My Wish List</h2>
